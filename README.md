@@ -11,8 +11,24 @@ A TypeScript utility library for guitar fretboard operations using [Tonal.js](ht
 
 ## Installation
 
+### From GitHub Packages
+
+First, configure npm to use GitHub Packages for the `@lchan752` scope by adding a `.npmrc` file to your project:
+
+```
+@lchan752:registry=https://npm.pkg.github.com
+```
+
+Then install the package:
+
 ```bash
-npm install fretboard
+npm install @lchan752/fretboard
+```
+
+Note: You may need to authenticate with GitHub Packages. Create a Personal Access Token with `read:packages` permission and add it to your `.npmrc`:
+
+```
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 ```
 
 ## Usage
@@ -20,7 +36,7 @@ npm install fretboard
 ### Basic Fretboard Operations
 
 ```typescript
-import { Fretboard } from 'fretboard';
+import { Fretboard } from '@lchan752/fretboard';
 
 const fretboard = new Fretboard();
 
@@ -38,7 +54,7 @@ const positions = fretboard.findPositions('E');
 ### Chord Information
 
 ```typescript
-import { getChordInfo, getChordDegree } from 'fretboard';
+import { getChordInfo, getChordDegree } from '@lchan752/fretboard';
 
 // Get complete chord information
 const cm7 = getChordInfo('m7', 'C');
@@ -61,7 +77,7 @@ Cm7(4); // Returns "Bb"
 ### Custom Tuning
 
 ```typescript
-import { Fretboard } from 'fretboard';
+import { Fretboard } from '@lchan752/fretboard';
 
 // Drop D tuning
 const dropD = ['E4', 'B3', 'G3', 'D3', 'A2', 'D2'];
