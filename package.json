@@ -1,9 +1,14 @@
 {
-  "name": "fretboard",
+  "name": "@lchan752/fretboard",
   "version": "1.0.0",
   "description": "Utility library for guitar fretboard using tonal js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -13,7 +18,15 @@
     "type": "git",
     "url": "git+https://github.com/lchan752/fretboard.git"
   },
-  "keywords": [],
+  "keywords": [
+    "guitar",
+    "fretboard",
+    "music",
+    "theory",
+    "chord",
+    "tonal",
+    "scale"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -21,6 +34,9 @@
     "url": "https://github.com/lchan752/fretboard/issues"
   },
   "homepage": "https://github.com/lchan752/fretboard#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "@tonaljs/chord": "^6.1.2",
     "@tonaljs/interval": "^5.1.0",
